@@ -41,3 +41,7 @@ code {
   border-radius: 8px;
   cursor: pointer;
 }
+.Category{
+  display: flex;
+  width: 15px;
+}

@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { useHistory} from 'react-router-dom';
-
+import { useParams } from "react-router"
 const Register = () => {
+  const {id} =useParams();
+  const [type,setType]=useState("")
+  const [name,setName]=useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -11,14 +14,15 @@ const Register = () => {
   const [wheight, setWheight] = useState("");
   const [skincolor, setSkinColor] = useState("");
   const [pic, setPic] = useState("");
+  const [categories,setCategories]=useState([]);
   const history=useHistory();
 //   const onSubmit=(data)=>{
 //         console.log(data)
 //     }
   const handleSubmit =(e)=>{
     e.preventDefault();
-    const user={firstName,lastName,email,password,gender,size,wheight,skincolor,pic};
-    fetch("http://localhost:3001/users", {
+    const user={firstName,lastName,email,password,gender,size,wheight,skincolor,pic,categories};
+    fetch("http://localhost:3001/users/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -26,11 +30,12 @@ const Register = () => {
         body: JSON.stringify(user),
       }).then((response) => {
         console.log(response.status);
+        
        // setIsPending();
         //history.go(-1);
       });
-      history.push("/");
-    };
+           // history.push("/");
+    }; 
   return (
     <div className="Register">
       <form onSubmit ={handleSubmit}>
