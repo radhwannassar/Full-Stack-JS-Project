@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "firstName": "jjjjJjj",
+      "lastName": "j",
+      "email": "j@j",
+      "password": "j",
+      "gender": "Male",
+      "size": "j",
+      "wheight": "j",
+      "skincolor": "j",
+      "pic": "",
+      "categories": [],
+      "id": 1
+    }
+  ],
+  "categories": [
+    {
+      "name": "Tshirt",
+      "img": "C:\\fakepath\\Capture d’écran (4).png",
+      "id": 1
+    }
+  ],
+  "customizedCategories": []
+}

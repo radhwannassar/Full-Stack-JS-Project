@@ -1,0 +1,10 @@
+.Foof {
+   
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 230px;
+    background:linear-gradient(90deg, rgb(38, 22, 129) 0%, rgb(26, 23, 23) 100%);
+    color: white;
+    text-align: center;
+  }
