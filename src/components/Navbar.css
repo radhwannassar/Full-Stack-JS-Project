@@ -1,4 +1,4 @@
-/* .navbar {
+.navbar {
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     height: 80px;
     display: flex;
@@ -14,8 +14,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
     height: 80px;
-    max-width: 1500px;
+    max-width: 3000px;
   }
   
   .navbar-logo {
@@ -47,6 +51,7 @@
   
   .nav-item {
     height: 80px;
+    
   }
   
   .nav-links {
@@ -86,8 +91,8 @@
       width: 100%;
       height: 90vh;
       position: absolute;
-      top: 80px;
-      left: -100%;
+      top: 0;
+      left: 0;
       opacity: 1;
       transition: all 0.5s ease;
     }
@@ -155,4 +160,8 @@
       color: #242424;
       transition: 250ms;
     }
-  } */
+  } 
+  .aaaa{
+    color: white;
+    width: 4rem;
+  }

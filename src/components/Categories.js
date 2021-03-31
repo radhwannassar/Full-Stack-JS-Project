@@ -1,13 +1,11 @@
-
-import { Card } from "react-bootstrap";
 import { useState } from "react";
-import { useParams } from "react-router";
+import { Link } from "react-router-dom";
+import "./Cards.css";
 
 const Categories = () => {
-  
   const [name, setName] = useState("");
   const [img, setImg] = useState("");
-  const {id} =useParams();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const category = { name, img };
@@ -21,23 +19,27 @@ const Categories = () => {
       console.log(response.status);
     });
   };
- 
+
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <Card style={{ width: "18rem" }}>
-          <Card.Body>
-            <Card.Title>
-              <label>Category Name:</label>
-              <input
-                type="text"
-                required
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              ></input>
-            </Card.Title>
-            <Card.Text>
-              <label>Category Picture:</label>
+    <form onSubmit={handleSubmit}>
+      <div className="style">
+        <div className="card-ainer">
+        <div>
+          
+            <div className="card-content">
+              <div className="card-title">
+                <h5>Category Name:</h5>
+                <input
+                  type="text"
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                ></input>
+              </div>
+            </div>
+
+            <div className="image-container">
+              <h5>Category Picture:</h5>
               <input
                 required
                 type="file"
@@ -45,13 +47,17 @@ const Categories = () => {
                 onChange={(e) => setImg(e.target.value)}
                 name="picture"
               ></input>
-            </Card.Text>
-            <button variant="primary">Add Category</button>
-          </Card.Body>
-        </Card>
-        
-      </form>
-    </div>
+            </div>
+
+            <div className="btn">
+              <button variant="primary">
+                <a>Add Category</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
   );
 };
 

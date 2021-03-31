@@ -19,14 +19,16 @@ const Login = () => {
         let found = false;
         data.forEach((d) => {
           if (d.email === email && d.password === password) {
-             history.push("/ConnectedHome");
+            // history.push("/ConnectedHome");
             found = true;
           }
           !found && (found = false);
         });
-
+          
         return ((isConnected = found),
-        setIsconnected(isConnected))
+        console.log(isConnected),
+        setIsconnected(isConnected)
+        )
       }, []);
   };
 

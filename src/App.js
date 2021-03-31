@@ -10,6 +10,7 @@ import Categories from "./components/Categories";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FittingRoom from "./components/FittingRoom";
 import { UserProvider } from "./UserContext";
+import Footer from "./components/Footer";
 function App() {
   return (
     <UserProvider>
@@ -41,6 +42,7 @@ function App() {
           </Switch>
         </div>
       </Router>
+      <Footer/>
     </UserProvider>
   );
 }

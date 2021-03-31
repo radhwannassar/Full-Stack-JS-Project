@@ -1,12 +1,13 @@
 import Relai from "./Relai";
 import CustomizedCategories from "./CustomizedCategories";
-
+import "../App.css"; 
 const ConnectedHome = () => {
   return (
-    <div>
+    <div >
       <Relai />
       <CustomizedCategories />
     </div>
+
   );
 };
 

@@ -1,15 +1,15 @@
 {
   "users": [
     {
-      "firstName": "jjjjJjj",
-      "lastName": "j",
-      "email": "j@j",
-      "password": "j",
+      "firstName": "radhwen",
+      "lastName": "nassar",
+      "email": "radhwen@g",
+      "password": "1111",
       "gender": "Male",
-      "size": "j",
-      "wheight": "j",
-      "skincolor": "j",
-      "pic": "",
+      "size": "11",
+      "wheight": "111",
+      "skincolor": "111",
+      "pic": "C:\\fakepath\\Capture d’écran (18).png",
       "categories": [],
       "id": 1
     }
@@ -19,7 +19,73 @@
       "name": "Tshirt",
       "img": "C:\\fakepath\\Capture d’écran (4).png",
       "id": 1
+    },
+    {
+      "name": "jeans",
+      "img": "C:\\fakepath\\Capture d’écran (30).png",
+      "id": 2
+    },
+    {
+      "name": "kjbbj",
+      "img": "C:\\fakepath\\Capture d’écran (30).png",
+      "id": 3
+    },
+    {
+      "name": "kh kb",
+      "img": "C:\\fakepath\\Capture d’écran (27).png",
+      "id": 4
+    },
+    {
+      "name": "aaa",
+      "img": "C:\\fakepath\\Capture d’écran (33).png",
+      "id": 5
     }
   ],
-  "customizedCategories": []
+  "customizedCategories": [
+    {
+      "catname": "aaa",
+      "catimg": "C:\\fakepath\\aa.jpg",
+      "id": 2
+    },
+    {
+      "catname": "nooun",
+      "catimg": "C:\\fakepath\\aa.jpg",
+      "id": 4
+    },
+    {
+      "catname": "kkkk",
+      "catimg": "C:\\fakepath\\aa.jpg",
+      "id": 5
+    },
+    {
+      "catname": "ubiub",
+      "catimg": "C:\\fakepath\\aa.jpg",
+      "id": 6
+    },
+    {
+      "catname": "aaa",
+      "catimg": "C:\\fakepath\\aa.jpg",
+      "id": 2
+    },
+    {
+      "catname": "nooun",
+      "catimg": "C:\\fakepath\\aa.jpg",
+      "id": 4
+    },
+    {
+      "catname": "kkkk",
+      "catimg": "C:\\fakepath\\aa.jpg",
+      "id": 5
+    },
+    {
+      "catname": "ubiub",
+      "catimg": "C:\\fakepath\\aa.jpg",
+      "id": 6
+    },
+    {
+      "catname": "kiuubb",
+      "catimg": "C:\\fakepath\\Capture d’écran (21).png",
+      "id": 7
+    }
+  ]
 }
