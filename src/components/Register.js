@@ -31,10 +31,10 @@ const Register = () => {
       }).then((response) => {
         console.log(response.status);
         
-       // setIsPending();
+       ;
         //history.go(-1);
       });
-           // history.push("/");
+            history.push("/");
     }; 
   return (
     <div className="Register">

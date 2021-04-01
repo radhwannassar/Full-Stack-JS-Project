@@ -5,6 +5,7 @@ const PageInrouvable = () => {
             <p> SVP veuillez verifier votre lien </p>
             <Link to="/"> Retour a la page d'acceuil</Link>
         </div>
+        
      );
 }
  
