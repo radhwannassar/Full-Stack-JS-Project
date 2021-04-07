@@ -1,212 +1,73 @@
-import React, { useState, useEffect } from "react";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import React from 'react';
 import "./Navbar.css";
+import  { useState, useEffect } from "react";
+import * as ReactBootStrap from "react-bootstrap";
+import {
+    BrowserRouter as Router,
+    Link
+  } from "react-router-dom";
 
-function Navbar() {
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener("resize", showButton);
-
-  return (
-    <>
-      <nav className="navbar">
-        <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <img src="./photo/logo.png" alt="" width="120" height="64" />
-          </Link>
-          <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
-          </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <Link
-                to="/ConnectedHome"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Home
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                to="/Categories"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Categories
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link
-                to="/Register"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Register
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/FittingRoom"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Fittingroom
-              </Link>
-            </li>
-          </ul>
-          <Button buttonStyle="btn--outline">
-            <Link to="/Login" onClick={closeMobileMenu} className="aaaa">
-              Login
-            </Link>
-          </Button>
-
+  function Navbar() {
+    const [click, setClick] = useState(false);
+    const [button, setButton] = useState(true);
+  
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
+  
+    const showButton = () => {
+      if (window.innerWidth <= 960) {
+        setButton(false);
+      } else {
+        setButton(true);
+      }
+    };
+  
+    useEffect(() => {
+      showButton();
+    }, []);
+  
+    window.addEventListener("resize", showButton);
+    return(
+        <div className="tt">
+            <div className="aa">
+    <ReactBootStrap.Navbar collapseOnSelect expand="xl">
+  <ReactBootStrap.Navbar.Brand href="#home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Link to="/"><img src="./logo.png" width="120px"></img></Link></ReactBootStrap.Navbar.Brand>
+  <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+    <ReactBootStrap.Nav className="mr-auto"> 
+   
+  
+    </ReactBootStrap.Nav>
+    <ReactBootStrap.Nav>
+     
+    <Link to="/ConnectedHome">
+    <ReactBootStrap.Nav.Link href="/ConnectedHome"><h1 className="hh">Home |</h1></ReactBootStrap.Nav.Link>
+    </Link>
+    <Link to="/Categories">
+    <ReactBootStrap.Nav.Link  href="/Categories">
+        <h1>Categories |</h1>
+      </ReactBootStrap.Nav.Link>
+    </Link>
+    <Link to="/Register">
+    <ReactBootStrap.Nav.Link  href="/Register">
+        <h1>Register |</h1>
+      </ReactBootStrap.Nav.Link>
+    </Link>
+    <Link to="/FittingRoom">
+    <ReactBootStrap.Nav.Link  href="/FittingRoom">
+        <h1>FittingRoom</h1>
+      </ReactBootStrap.Nav.Link>
+    </Link>
+                                                                                                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <Link to="/Login">
+    <button type="button" class="btn btn-dark btn-lg"><h1>Sign In</h1></button>
+    </Link>
+    </ReactBootStrap.Nav>
+  </ReactBootStrap.Navbar.Collapse>
+</ReactBootStrap.Navbar>
+</div>
         </div>
-      </nav>
-    </>
-  );
+    )
 }
 
 export default Navbar;
-// import { Link } from "react-router-dom";
-
-// const Navbar = ({ isConnected }) => {
-//   //console.log({ isConnected });
-
-//   var loginButton;
-//   if (isConnected) {
-//     loginButton = "Logout";
-//   } else {
-//     loginButton = "Login";
-//   }
-
-//   return (
-
-//       <nav>
-//         <Link to="/ConnectedHome">ConnectedHome</Link>
-//          <Link to="/Categories">Category</Link>
-//          <Link to="/">Home</Link>
-//          <Link to="/Register">Register</Link>
-//          <Link to="/Login"> {loginButton}</Link>
-//          <Link to="/Fittingroom"> Fittingroom</Link>
-//       </nav>
-
-//   );
-// };
-
-// export default Navbar;
-
-// <div>
-//   {isConnected ? (
-//     <nav>
-//       <Link to="/ConnectedHome">Home</Link>
-//       <Link to="/Categories">category</Link>
-//     </nav>
-//   ) : (
-//     <nav>
-//       <Link to="/">Home</Link>
-//       <Link to="/Register">Register</Link>
-//       <Link to="/Login"> {loginButton}</Link>
-//     </nav>
-//   )}
-// </div>
-
-// import React, { useState, useEffect } from 'react';
-// import { Button } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
-// import './Navbar.css';
-
-// function Navbar() {
-//   const [click, setClick] = useState(false);
-//   const [button, setButton] = useState(true);
-
-//   const handleClick = () => setClick(!click);
-//   const closeMobileMenu = () => setClick(false);
-
-//   const showButton = () => {
-//     if (window.innerWidth <= 960) {
-//       setButton(false);
-//     } else {
-//       setButton(true);
-//     }
-//   };
-
-//   useEffect(() => {
-//     showButton();
-//   }, []);
-
-//   window.addEventListener('resize', showButton);
-
-//   return (
-//     <>
-//       <nav className='navbar'>
-//         <div className='navbar-container'>
-//           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-//             TRVL
-//             <i class='fab fa-typo3' />
-//           </Link>
-//           <div className='menu-icon' onClick={handleClick}>
-//             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-//           </div>
-//           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-//             <li className='nav-item'>
-//               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-//                 Home
-//               </Link>
-//             </li>
-//             <li className='nav-item'>
-//               <Link
-//                 to='/Login'
-//                 className='nav-links'
-//                 onClick={closeMobileMenu}
-//               >
-//                 Services
-//               </Link>
-//             </li>
-//             <li className='nav-item'>
-//               <Link
-//                 to='/Categories'
-//                 className='nav-links'
-//                 onClick={closeMobileMenu}
-//               >
-//                 Products
-//               </Link>
-//             </li>
-
-//             <li>
-//               <Link
-//                 to='/Register'
-//                 className='nav-links-mobile'
-//                 onClick={closeMobileMenu}
-//               >
-//                 Sign Up
-//               </Link>
-//             </li>
-//           </ul>
-//           {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
-//         </div>
-//       </nav>
-//     </>
-//   );
-// }
-
-// export default Navbar;

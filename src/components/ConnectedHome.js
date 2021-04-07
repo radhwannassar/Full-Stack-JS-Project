@@ -1,11 +1,15 @@
-import Relai from "./Relai";
+import Relaic from "./Relaic";
 import CustomizedCategories from "./CustomizedCategories";
+
 import "../App.css"; 
+
 const ConnectedHome = () => {
   return (
     <div >
-      <Relai />
+
+      <Relaic />
       <CustomizedCategories />
+      
     </div>
 
   );

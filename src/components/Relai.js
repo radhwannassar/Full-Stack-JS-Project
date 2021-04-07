@@ -15,7 +15,7 @@ const Relai = () => {
   }, []);
 
   return (
-    <div className="categories">
+    <div className="categorie">
       {data.map((category) => (
         <div key={category.id}>
           <Link to={`/items/${category.id}`}>

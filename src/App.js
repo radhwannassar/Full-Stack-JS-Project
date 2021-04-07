@@ -1,5 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Register from "./components/Register";
@@ -11,19 +12,32 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FittingRoom from "./components/FittingRoom";
 import { UserProvider } from "./UserContext";
 import Footer from "./components/Footer";
+import Profile from "./components/Profile";
+import Item from "./components/Item";
 function App() {
   return (
     <UserProvider>
       <Router>
         <div className="App">
-          <Navbar />
+          <div className="nn">
+             <Navbar />
+          </div>
+         
+          <Sidebar />
           <Switch>
             <Route exact path="/">
               <Home />
             </Route>
+            <Route exact path="/Profile">
+              <Profile />
+            </Route>
+            <Route exact path="/Item">
+              <Item />
+            </Route>
             <Route exact path="/Register">
               <Register />
             </Route>
+            
             <Route exact path="/Login">
               <Login />
             </Route>
