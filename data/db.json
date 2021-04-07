@@ -12,6 +12,32 @@
       "pic": "C:\\fakepath\\Capture d’écran (18).png",
       "categories": [],
       "id": 1
+    },
+    {
+      "firstName": "malek",
+      "lastName": "ben gharbia",
+      "email": "malek@gmail.com",
+      "password": "1111",
+      "gender": "Male",
+      "size": "45",
+      "wheight": "70",
+      "skincolor": "blue",
+      "pic": "C:\\fakepath\\08.jpg",
+      "categories": [],
+      "id": 2
+    },
+    {
+      "firstName": "RM",
+      "lastName": "WARDROBE",
+      "email": "RM@gmail.com",
+      "password": "1234",
+      "gender": "Male",
+      "size": "50",
+      "wheight": "67",
+      "skincolor": "BLUE",
+      "pic": "C:\\fakepath\\06.jpg",
+      "categories": [],
+      "id": 3
     }
   ],
   "categories": [
@@ -39,6 +65,21 @@
       "name": "aaa",
       "img": "C:\\fakepath\\Capture d’écran (33).png",
       "id": 5
+    },
+    {
+      "name": "aaaa",
+      "img": "C:\\fakepath\\similar2.jpg",
+      "id": 6
+    },
+    {
+      "name": "aaaa",
+      "img": "C:\\fakepath\\similar2.jpg",
+      "id": 7
+    },
+    {
+      "name": "aaaa",
+      "img": "C:\\fakepath\\similar2.jpg",
+      "id": 8
     }
   ],
   "customizedCategories": [
@@ -56,36 +97,6 @@
       "catname": "kkkk",
       "catimg": "C:\\fakepath\\aa.jpg",
       "id": 5
-    },
-    {
-      "catname": "ubiub",
-      "catimg": "C:\\fakepath\\aa.jpg",
-      "id": 6
-    },
-    {
-      "catname": "aaa",
-      "catimg": "C:\\fakepath\\aa.jpg",
-      "id": 2
-    },
-    {
-      "catname": "nooun",
-      "catimg": "C:\\fakepath\\aa.jpg",
-      "id": 4
-    },
-    {
-      "catname": "kkkk",
-      "catimg": "C:\\fakepath\\aa.jpg",
-      "id": 5
-    },
-    {
-      "catname": "ubiub",
-      "catimg": "C:\\fakepath\\aa.jpg",
-      "id": 6
-    },
-    {
-      "catname": "kiuubb",
-      "catimg": "C:\\fakepath\\Capture d’écran (21).png",
-      "id": 7
     }
   ]
 }

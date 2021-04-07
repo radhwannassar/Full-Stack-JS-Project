@@ -1,9 +1,27 @@
 import Relai from "./Relai";
+import "./fitting.css";
 
 const FittingRoom = () => {
     return ( 
         <div>
-            <Relai/>
+        <div class="ft">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col"><Relai/></div>
+                
+                </div>
+            </div>
+            <div class="col">
+                <div class="md">
+                <img src="./model.png"></img>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
         </div>
      );
 }
